@@ -1,10 +1,10 @@
-function add(a, b) {
+/* function add(a, b) {
   return a + b;
 }
 
-const result = add(2, 5);
+const result = add(2, 5); */
 
-console.log(result); // 7
+/* console.log(result); // 7
 
 function add(a, b) {
   return a + b;
@@ -12,4 +12,4 @@ function add(a, b) {
 
 const result = add('2', '5');
 
-console.log(result); // 25
+console.log(result); // 25 */
