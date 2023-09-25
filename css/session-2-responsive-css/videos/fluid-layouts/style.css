@@ -1,0 +1,11 @@
+.column{
+  float: left;
+}
+
+.side{
+  width: 25%;
+}
+
+.main{
+  width: 50%;
+}

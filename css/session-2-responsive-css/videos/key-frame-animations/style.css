@@ -1,0 +1,126 @@
+body{
+  margin: 0px;
+}
+
+.column{
+  float: left;
+}
+
+.side{
+  width: 25%;
+}
+
+.main{
+  width: 50%;
+}
+
+.container{
+  text-align: center;
+  display: flex;
+}
+
+.container-cards{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.overlay{
+  background: black;
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card{
+  max-width: 33%;
+  margin-bottom: 12px;
+  margin-right: auto;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px black;
+  animation: slideFromLeft 1s forwards;
+  
+  
+  transform: translateX(-100%);
+  opacity: 0;
+    }
+
+.card:hover {
+  background: grey;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+@keyframes slideFromLeft{
+
+  
+/*   75%{
+    transform: translateX(-80%);
+    opacity: 0.8;
+  } */
+
+  100%{
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.card:nth-child(1){
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(2){
+  animation-delay: 0.6s;
+}
+
+.card:nth-child(3){
+  animation-delay: 0.9s;
+}
+
+
+.card-title{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: white;
+  z-index: 10;
+}
+
+.card-image{
+  position: relative;
+}
+
+.container-cards img{
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 968px) {
+  .card{
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .column, .side, .main {
+    float: none;
+    width: 100%;
+  }
+  .side{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 480px){
+  .card{
+    max-width: 100%;
+  }
+}

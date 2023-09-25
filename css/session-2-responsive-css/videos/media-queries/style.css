@@ -1,0 +1,25 @@
+.column{
+  float: left;
+}
+
+.side{
+  width: 25%;
+}
+
+.main{
+  width: 50%;
+}
+
+.container{
+  text-align: center;
+}
+
+@media screen and (max-width: 768px){
+  .column, .side, .main {
+    float: none;
+    width: 100%;
+  }
+  .side{
+    display: none;
+  }
+}
