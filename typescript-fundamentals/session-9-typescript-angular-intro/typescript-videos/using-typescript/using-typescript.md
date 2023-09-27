@@ -1,4 +1,5 @@
 In order to use TypeScript, we need to install it first. We can do this by running the following command in our terminal:
+  npm init -y
   npm install typescript
 
 Next, invoke the TypeScript compiler.
