@@ -1,7 +1,6 @@
 Creating our own components:
 
 All of our components will be added to the app.component.html file.
-
 All app related content will go into the app folder.
 
 We want to output information about our server. We will create a new folder called server. (Have the folder name = the component name)
