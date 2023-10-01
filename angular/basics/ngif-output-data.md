@@ -39,5 +39,3 @@ TS =    export class Servers Component{
 
 
 HTML = <p *ngIf="serverCreated">Server was created, {{serverName}}.</p>
-
-```
