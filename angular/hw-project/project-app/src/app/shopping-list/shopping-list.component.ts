@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Ingredient } from '../shared/ingedient.model';
 
 @Component({
   selector: 'app-shopping-list',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ShoppingListComponent {
 
+  ingredients: Ingredient [] = [
+    new Ingredient ('Apples', 5),
+    new Ingredient ('Tomatoes', 10),
+  ];
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
 }
