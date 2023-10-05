@@ -124,4 +124,9 @@ This requires us to inform our app.component that one of its child components (t
 
   *//----------------------------------------------------------------// VIEW ENCAPSULATION //---------------------------------------------------------------//*
 
-  
+  + By default, Angular adds a unique attribute to each component. This is to make sure that the styles of one component do not affect the styles of another component.
+
+  + If you want to override this, you can use the encapsulation property in the @Component decorator.
+    - encapsulation: ViewEncapsulation.( None / Native / Emulated )
+
+*//----------------------------------------------------------------// LOCAL REFERENCES //---------------------------------------------------------------//*
