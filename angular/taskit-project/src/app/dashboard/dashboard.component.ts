@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  tasks = [];
 
+  addNewTask(task) {
+    this.tasks.push(task);
+  }
+
+  constructor() {
+
+  }
 }
