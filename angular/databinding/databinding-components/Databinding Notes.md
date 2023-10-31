@@ -130,3 +130,63 @@ This requires us to inform our app.component that one of its child components (t
     - encapsulation: ViewEncapsulation.( None / Native / Emulated )
 
 *//----------------------------------------------------------------// LOCAL REFERENCES //---------------------------------------------------------------//*
+
+  + Local references can be added to any HTML element by adding #[name of reference] to the element.
+    - This reference will hold the reference to the entire html element with all of its properties and methods, not just the value of the element.
+    - This allows us to refer to it in methods.
+
+  + Local references can be used to pass data from the template to the component.
+    - They cannot be used in the typescript code.
+
+  + Local references can be used to pass data from the component to the template.
+
+  *//----------------------------------------------------------------// @ViewChild //---------------------------------------------------------------//*
+
+  + @ViewChild allows us to have access BEFORE you call the method.
+
+  + In Angular 8+, the @ViewChild() syntax which you'll see in this lecture needs to be changed slightly:
+
+  + Instead of:
+    - @ViewChild('serverContentInput') serverContentInput: ElementRef; 
+  
+  + Use:
+      - @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
+  
+  + The same change (add { static: true } as a second argument) needs to be applied to ALL usages of @ViewChild() (and also @ContentChild() which you'll learn about later) IF you plan on accessing the selected element inside of ngOnInit().
+
+  + If you DON'T access the selected element in ngOnInit (but anywhere else in your component), set static: false instead!
+
+  + For projects using Angular 9 or higher (check the package.json file to find out), you can omit static: false, you only need to specify static: true if you plan on using the selected element inside of ngOnInit().
+
+  *//----------------------------------------------------------------// ng-content //---------------------------------------------------------------//*
+
+  + ng-content allows us to pass data from outside the component.
+
+  + ng-content is used in the child component to tell angular where to render the content that is passed in from the parent component.
+
+  *//----------------------------------------------------------------// Lifecycle Hooks //---------------------------------------------------------------//*
+
+  + When angular creates a component, it goes through a series of steps. These steps are called lifecycle hooks.
+
+  + We can grab these lifecycle hooks through certain methods:
+
+    - ngOnChanges()           = Called after a bound input property (properties decorated with @input) changes.
+    - ngOnInit()              = Called once the component is initialized (after the constructor).
+    - ngDoCheck()             = Called during every change detection run.
+    - ngAfterContentInit()    = Called after content (ng-content) has been projected into view.
+    - ngAfterContentChecked() = Called every time the projected content has been checked.
+    - ngAfterViewInit()       = Called after the component's view (and child views) has been initialized.
+    - ngAfterViewChecked()    = Called every time the view (and child views) have been checked.
+    - ngOnDestroy()           = Called once the component is about to be destroyed.
+
+  + Each hook requires the interface to be imported from @angular/core AND exported in the class.
+
+  + ngOnInit / Constructor
+    - ngOnInit is called after the constructor.
+    - ngOnInit is a good place to put initialization logic.
+
+  + ngOnChanges
+    - receives an argument = changes: SimpleChanges
+      * SimpleChanges is an object that contains all of the changes that have been made to the component.
+      * SimpleChanges must be imported from @angular/core
+  
