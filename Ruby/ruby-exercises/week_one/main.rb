@@ -19,8 +19,8 @@ end
 
 # 4 - Basic Methods
 # Create a Ruby script that defines a method called add that takes two numbers as arguments and returns their sum.
-def add(num1, num2)
-  num1 + num2
+def add(a, b)
+ a + b
 end
 
 add(1, 2)

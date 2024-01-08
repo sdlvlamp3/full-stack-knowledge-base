@@ -241,7 +241,7 @@
    - Repeating Operations: With Loops, control flow enables the repetition of tasks without writing redundant code, making programs more efficient and concise.
    - Order of Execution: It determines the sequence in which the code is executed, which is crucial for the logical flow and correctness of the program.
    - Conditional Statements will execute different code based on certain conditions. These are crucial for adding decision-making capabilities to your code.
-   - In Ruby, conditional statements are created using the if, if/else, if/elseif/else, and case statements.
+   - In Ruby, conditional statements are created using the if, if/else, if/elsif/else, and case statements.
 
  # If Statements:
    - The if statement is the most basic form of conditional execution. It runs the code block only if the condition is true.
@@ -267,8 +267,8 @@
          puts "It's not a hot day."
        end 
 
- # Elseif Statement:
-   - The elseif statement allows you to check multiple conditions. It is used in conjunction with the if statement and must come back before the else block.  
+ # Elsif Statement:
+   - The elsif statement allows you to check multiple conditions. It is used in conjunction with the if statement and must come back before the else block.  
      * if condition1
          [code to execute if condition1 is true]
        elsif condition2
@@ -296,7 +296,7 @@
        end\
 
  # Case Statement:
-   - The case statement is used to compare a value against multiple conditions. It is similar to the if/elseif/else statement, but it is more concise and easier to read. 
+   - The case statement is used to compare a value against multiple conditions. It is similar to the if/elsif/else statement, but it is more concise and easier to read. 
      * case value
        when condition1
          [code to execute if condition1 is true]
