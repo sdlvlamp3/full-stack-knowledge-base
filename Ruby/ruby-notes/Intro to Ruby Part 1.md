@@ -1,4 +1,4 @@
-*//------------------------------------------------------------DATA TYPES------------------------------------------------------------//*
+*//------------------------------------------------------------INTRO TO RUBY PART 1: DATA TYPES------------------------------------------------------------//*
 
  # What are data types?
    - A classification that dictates what sort of value a variable can hold and how the computer interprets that value.
@@ -569,3 +569,112 @@
        bundle install - installs all the gems in your Gemfile
        rspec --init - creates the necessary configuration files, including spec_helper.rb and a .rspec file in your project directory. This command creates the necessary configuration files,including spec_helper.rb and a .rspec file in your project directory.
      * Test files in RSpec are typically placed in the spec directory and end with _spec.rb. Create this directory if it doesn't exist, and start adding your test files there.
+
+ # Writing a Simple Test:
+   - Suppose we want to test a simple method in math_operations.rb
+
+*//--------------Example: math_operations.rb------------//*
+
+def add
+end
+
+*//-----------------------------------------------------//*
+
+   - To test the method we would create a corresponding Rspec test file.
+   - To create the test file, create a file named [file_name.spec.rb] inside a spec folder
+     * For our example it is math_operations.spec.rb 
+
+*//--------------Example: math_operations.spec.rb------------//*
+
+require_relative '../math_operations'           |   -->   Directing to the file that the spec file is going to test.
+describe 'math_operations' do                   |   -->   Organizing the test to check the corresponding file.
+  describe'#add' do                             |   -->   Organizing the test to check the add method.
+    it 'correctly adds two numbers' do          |   -->   Testing that the add method executes the correct behavior.
+      expect(add(2, 3)).to eq(5)                |   -->   Instantiating the expected results of the add method.
+    end
+  end
+end
+
+*//----------------------------------------------------------//*
+
+   - "describe" blocks are used to organize the tests. They can represent methods or behaviors.
+   - "it" blocks contain the individual tests. Each "it" block should test one aspect of the behavior.
+   - "expect(...).to eq(...) syntax is used to assert expected outcomes.
+   - Upon running the test for math_operations.rb, you will get a failing tests because the add method is not implemented yet. You can implement the method and run the tests again to see if they pass.
+
+*//--------------Example: math_operations.spec.rb------------//*
+
+F
+
+Failures:
+
+  1) math_operations #add correctly adds two numbers
+     Failure/Error: expect(add(2, 3)).to eq(5)
+
+     ArgumentError:
+       wrong number of arguments (given 2, expected 0)
+     # ./math_operations.rb:1:in `add&#39;
+     # ./spec/math_operations_spec.rb:5:in `block (3 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.06202 seconds (files took 0.5056 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/math_operations_spec.rb:4 # math_operations #add correctly adds two numbers
+
+*//----------------------------------------------------------//*
+
+   - This means that the add method is not implemented correctly since it's expecting two arguments and is currently receiving none.
+   - This is fixed by implementing the method correctly.
+
+*//--------------Example: math_operations.rb------------//*
+
+def add (a, b)
+end
+
+*//-----------------------------------------------------//*
+
+   - Running the test again yields another failure.
+
+*//--------------Example: math_operations.spec.rb------------//*
+
+F
+
+Failures:
+
+  1) math_operations #add correctly adds two numbers
+     Failure/Error: expect(add(2, 3)).to eq(5)
+
+       expected: 5
+            got: nil
+
+       (compared using ==)
+     # ./spec/math_operations_spec.rb:5:in `block (3 levels) in &lt;top (required)&gt;&#39;
+
+Finished in 0.09761 seconds (files took 0.57531 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/math_operations_spec.rb:4 # math_operations #add correctly adds two numbers
+
+*//----------------------------------------------------------//*
+
+   - This means that the add method is not returning the correct value.
+   - This is fixed by implementing the method correctly.
+
+*//--------------Example: math_operations.rb------------//*
+
+def add (a, b)
+  a + b
+end
+
+*//-----------------------------------------------------//*
+
+   - Running the tests again will result in a pass.
+
+*//--------------Example: math_operations.spec.rb------------//*
+Finished in 0.00929 seconds (files took 0.35119 seconds to load)
+1 example, 0 failures
+*//----------------------------------------------------------//*
