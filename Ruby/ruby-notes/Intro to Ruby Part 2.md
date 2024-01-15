@@ -255,7 +255,7 @@ book.print_pages     -->     352
  # Access Modifiers:
    - Access modifiers are keywords that are used to control the visibility of methods and variables.
    - There are three access modifiers in Ruby:
-     * Public:      Methods and variables can be accessed by anyone. Public methods have no Access Modifier keyword.
+     * Public:      Methods and variables can be accessed by anyone.
      * Protected:   Methods and variables can only be accessed by the class that defines them and its subclasses.
      * Private:     Methods and variables can only be accessed by the class that defines them. Private methods are indicated through the "private" keyword.
    - Below is an example of access modifiers through public and private methods.
