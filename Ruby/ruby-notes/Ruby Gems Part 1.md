@@ -1,4 +1,4 @@
-*//------------------------------------------------------------RUBY GEMS------------------------------------------------------------//*
+*//------------------------------------------------------------RUBY GEMS: CLI------------------------------------------------------------//*
 
  # Ruby Gems:
    - Ruby gems are packages of code that you can use in Ruby projects.
@@ -258,7 +258,7 @@ end
 
   - Above, we use the require methods to require the Nokogiri and HTTParty gems
   - The Scraper module is used  to define a method called "scrape_countries" that makes a GET request to the INDEX_URL and parses the HTML doc.
-  - The INDEX_URL is a constant that is used to stare the URL that we want to scrape.
+  - The INDEX_URL is a constant that is used to parse the URL that we want to scrape.
   - the HTTParty.get method is used to make a GET request to the INDEX_URL.
   - The puts method prints out the parsed HTML document to the terminal.
   - Call the scrape_countries method from the start method in the cli.rb file.
@@ -524,7 +524,43 @@ end
 
    - Now we have a functional CLI that allows the user to get information about a country.
    - However, we can only get information about one country.
-   - We can further improve this, but for now this will do.
+   - We need to stop the app from exiting until the user types in "exit"
+
+*//--------------------------------------Countries of the World CLI: lib/cli.rb--------------------------------------//*
+require_relative "scraper.rb"
+
+class CLI
+  def start
+    Scraper.scrape_countries
+    puts "Welcome to the Countries of the World CLI!"
+    puts "What is your name?"
+    name = gets.strip
+    puts "Hello #{name}!"
+    until menu == "exit"
+    puts "Please enter a country name to get more information about it."
+    input = gets.strip
+    country = Country.all.find { |country| country.name.downcase == input.downcase }
+    if country === nil
+      puts "Sorry, that country is not in our database. Please try again."
+    else
+    puts "Name: #{country.name}"
+    puts "Capital: #{country.capital}"
+    puts "Population: #{country.population}"
+    puts "Area: #{country.area}"
+  end
+end
+
+  def get_input
+    gets.strip
+  end
+
+  def goodbye
+    puts "Thank you. Goodbye!"
+  end
+end
+*//------------------------------------------------------------------------------------------------------------------//*
+
+   - By adding the until loop, the code will continue to be executed until the user types in the menu "exit"
 
  # Technical Documentation:
    - Technical Documentation is used to help create a better experience for the developer.
