@@ -26,7 +26,7 @@
 source "https://rubygems.org"
 ruby '3.1.2'
 gem "nokogiri"
-*//--------------------------//*
+*//----------------------------------//*
 
    - The "source" method is used to specify the source of the gems that we want to use. 
    - The "gem" method is used to specify the gem we want to use.
