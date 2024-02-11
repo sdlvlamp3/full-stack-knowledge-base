@@ -432,7 +432,7 @@ end
  # INTERACTING WITH THE DATABASE WITH MODELS cont:
    - In this class, we can define methods that include business logic, validations and callbacks
    - Naming of files and folders is VERY important in Rails. If we don't name them correctly, Rails will not be able to find them.
-     * Ex: If we name the model file usurs.rb instead of users.rb, Rails won't find it.
+     * Ex: If we name the model file users.rb instead of user.rb, Rails won't find it.
      * This is because Rails uses the naming convention to determine where to look for files and folders.
    - Same goes for naming of the class.
 
