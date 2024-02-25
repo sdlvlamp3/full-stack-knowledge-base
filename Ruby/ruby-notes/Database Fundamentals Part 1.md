@@ -1,6 +1,6 @@
-*//------------------------------------------------------------DATABASE FUNDAMENTALS PART 1------------------------------------------------------------//*
+# DATABASE FUNDAMENTALS:
 
- # Intro to Databases:
+ ## Intro to Databases:
    - Database:          A collection of data stored in a computer system.
    - They are used to store data in a strucutred way, so that it can be easily managed and accessed
    - They are used in many applications, spanning virtually the entire range of computer software.
@@ -9,7 +9,7 @@
    - The topic of databases is very broad, and there are many different types of databases and database management systems.
    - We will go over the most common types of databases and different ways of organizing data in a database using SQL (Structured Query Language)
 
- # Database Management Systems:
+ ## Database Management Systems:
    - Database Management System (DBMS):     A software that uses a standard method to store and organize data.
    - The data can be added, updated, deleted or traversed using various standard algorithms and queries.
    - DBMS's are categorized according to their data structures or types.
@@ -21,7 +21,7 @@
      * Without a DBMS, this report would be difficult to create because the data would have to be stored in many different locations.
      * With a DBMS, the report can be generated with a few simple queries.
 
- # Examples of DBMS:
+ ## Examples of DBMS:
    - SQLite
    - MySQL
    - PostgreSQL
@@ -34,11 +34,11 @@
    - Clipper
    - FoxPro
 
- # Types of Databases 
+ ## Types of Databases 
    - Two of the most common types of databases are relational and non-relational. 
    - The key difference between them is how they store data.
 
- # Relational Database:           
+ ### Relational Database:           
    - Also called SQL databases, are used for storing structural data and are based on tables. 
    - They use SQL for defining and manipulating data.
    - Relational databases are easy to extend.
@@ -52,7 +52,7 @@
      * Drupal
      * Joomla   
   
- # Non-Relational Database:
+ ### Non-Relational Database:
    - Also called NoSQL, are used for storing unstructured data.
    - They use a variety of data models including:
      * Document
@@ -72,7 +72,7 @@
      * Twitter
      * LinkedIn
 
- # When to use different types of databases?
+ ### When to use different types of databases?
    - It is not always easy to decide which type of database to use.
    - There are many factores to consider, including:
      * The types of data you are storing
@@ -83,7 +83,7 @@
    - In general, non-relational databases are good for applications that need to handle large amounts of data where the data structure is not known in advance.
    - It is possible to use both types of databases for the same application.
 
- # Differnt Types of SQL Databases:
+ ### Differnt Types of SQL Databases:
    - There are several types of SQL databases, but the most common are MySQL, PostgreSQL, and SQLite.
    - MySQL is the most popular open-source database, and is the default database for many content management systems including WordPress and Drupal.
      * MySQL is generally known for its fast read operations, making it a good choice for read-heavy applications.
@@ -95,14 +95,14 @@
      * Generally known for its simplicity
      * A good choice for applications that need a lightweight database without the overhead ofa  client-server database engine.
 
- # Introduction to SQL:
+ ## Introduction to SQL:
    - SQL:       A programming language used to communicate with data stored in a relational database management system.
    - SQL syntax is similar to the English language, which makes it relatively easy to write, read and interpret.
    - It used for tasks such as retrieving data from a database, inserting new data, updating existing data, and deleting data.
    - It is a standard language for storing, manipulating, and retrieving data in databases.
    - Most SQL syntax is compatible with all databases.
 
- # Creating Tables:
+ ### Creating Tables:
    - SQL databases store their data in tables.
    - A table is a collection of related data and it consists oof columns and rows.
    - Databases are useful for storing information categorically.
@@ -156,7 +156,7 @@ CREATE TABLE Employees (
      * BirthDate is a date value that stores the birthday of the employee
      * Notes is a long text string that stores notes about the employee
 
- # Inserting Data:
+ ## Inserting Data:
    - To insert data into a table, you use the "INSERT INTO" statement
    - The following statement inserts a new row into the Employees table:
 
@@ -180,7 +180,7 @@ VALUES (1, 'Doe', 'John', '1990-01-01', 'John Doe was born on January 1, 1990.')
    - (EmployeeID, LastName, FirstName, BirthDate, Notes) is a parameter that lists the columns that the "INSERT INTO" statement will insert values into
    - "VALUES" is a clause that indicates that the data being inserted in order of the columns specified in the "INSERT INTO" clause
 
- # Selecting Data:
+ ## Selecting Data:
    - Selecting data refers to the retrieval of data from a database.
    - To select data from a table, you use the "SELECT" statement.
 
@@ -232,7 +232,7 @@ SELECT FirstName, LastName FROM Employees;
 
 *//------------------------------------------------------------------------------//* 
 
- # Where Clause:
+ ## Where Clause:
    - The "WHERE" clause is used to filter records.
    - It is used to extract only those records that fulfill a specified condition.
    - The following is a "WHERE" statment that selects all rows from the Employees table where the FirstName is equal to "John":
@@ -347,7 +347,7 @@ SELECT * FROM Employees WHERE NOT FirstName = 'John';
      * 2|Doe|Jane|1991-02-02|Jane Doe was born on February 2, 1991.
    - NOT is an opertor that negates the condition the follows it. The NOT operator displays a record if ht econdition(s) are NOT TRUE.
 
- # Why is WHERE important?:
+ ### Why is WHERE important?:
    - It allows you to extract only the data that you need from a table
    - When you query a table with millions of rows, returning all the rows will consume the bandwidth of your database server, and put unnecessary load on it.
    - This will slow down the database server, and will slow down you application.
@@ -362,7 +362,7 @@ SELECT * FROM Employees WHERE NOT FirstName = 'John';
    - If you are extracting data from a table with millions of rows and you are using a slow internet connection, it might take a long time to download the data.
    - By using the WHERE clause you can reduce the amount of data that you need to download and reduce your costs.
 
- # Order By Clause:
+ ## Order By Clause:
    - The "ORDER BY" clause is used to sort the result set in ascending or descending order.
    - The "ORDER BY" clause is is set to sort in ascending order by default.
    - To sort the result set in descending order, you use the "DESC" keyword.
@@ -395,7 +395,7 @@ SELECT * FROM Employees ORDER BY FirstName;
    - SELECT * FROM Employees is the statement that you want to execute.
    - The "ORDER BY" clause can also be sued to sort the result in descending order by add "DESC" at the end.
 
- # Limit Clause:
+ ## Limit Clause:
    - The "LIMIT" clause is used to limit the number of rows returned by a query. 
    - The "LIMIT" clause is used in the "SELECT" statement.
    - The following statement selects the first 10 rows from the Employees table:
@@ -441,7 +441,7 @@ SELECT * FROM Employees ORDER BY EmployeeID DESC LIMIT 3;
 
    - Notice how the code is executed from left to right, meaning it will first order the result set in descending order by EmployeeID column, and then it will select the first 3 rows.
 
- # Aggregate Functions:
+ ## Aggregate Functions:
    - Aggregate Functions:     Used to perform calculations on a set of values and return a single value.
    - They are often used with the "GROUP BY" clause of the "SELECT" statement.
    - The following table shows the most commonly used aggregate functions:
@@ -494,12 +494,12 @@ SELECT AVG(BirthDate) FROM Employees;
    - This is useful in several ways:
      * If you wanted to find the oldest employee, you can use the "MAX()" function to fin d the largest birth date of all employees in the Employee table.  
    
- # Why use Aggregate Functions?:
+ ### Why use Aggregate Functions?:
    - Aggregate functions save you time and effort because they allow you to perform calculations on a set of values and return a single value.
    - Pulling in all the data and performing calculations on it can be time consuming and resource intensive. 
    - Using aggregate functions means that you can reduce the amount of data that you need to download, and speed up your application.
 
- # GROUP BY Clause:
+ ## GROUP BY Clause:
    - The "GROUP BY" clause is used to group the result set by one or more columns.
    - The "GROUP BY" clause is often used with aggregate functions such as AVG(), COUNT(), MAX(), MIN(), and SUM().
    - The following statement will group the result set by the FirstName column and returns the number of Employees for  each group.
@@ -556,7 +556,7 @@ SELECT FirstName, COUNT(*) FROM Employees GROUP BY FirstName ORDER BY COUNT(*) A
    - This prevents you from extracting all the data and performing calculations on it.
    - By using GROUP BY, you can group the result set and reduce the amount of data that you need to download.
 
- # Having Clause:
+ ## Having Clause:
     - The "HAVING" clause is used to filter groups in the result set.
     - The "HAVING" clause is often used with aggregate functions like AVG(), COUNT(), MAX(), MIN(), and SUM().
     - The following statement groups the result set by the FirstName column and returns the number of employees for each group. It also filters the groups that have more than 1 employee.
@@ -572,11 +572,11 @@ SELECT FirstName, Count(*) FROM Employees GROUP BY FirstName HAVING COUNT(*) > 1
    - This prevents you from extracting all the data and performing calculations on it.
    - By using HAVING, you can group the result set and reduce the amount of data that you need to download.
 
- # Introduction to Joins:
+ ## Introduction to Joins:
    - A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
    - There are several different types of JOIN you can use to combine your tables.
 
- # JOIN Types:
+ ### JOIN Types:
    - INNER:           Returns rows when there is a match in both tables.
    - LEFT:            Returns all rows from the left side of the table, and the matched rows from the right side of the table.
      * The difference between a LEFT JOIN and an INNER JOIN is that a LEFT returns all rows from the left table, even if there is no match in the right table.
