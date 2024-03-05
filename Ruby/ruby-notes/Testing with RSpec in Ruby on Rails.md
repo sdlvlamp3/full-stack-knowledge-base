@@ -27,7 +27,7 @@
    - This will generate a new Rails application without the default testing framework.
    - Without adding -T, Rails will automatically add Minitest.
    - If you want to remove preexisting test files run the following command:
-     * fm -rf test/
+     * rm -rf test/
    - Add the following gems to your gemfile:
 
 *//----------gemfile----------//*         
