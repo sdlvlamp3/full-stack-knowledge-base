@@ -355,7 +355,7 @@ end
    - Notice we used the "before" method.
      * This method runs the code before each test.
      * In this case, we are making a POST request to the /posts endpoint with the "valid_attributes" hash.
-   - Next, we will create a test for teh GET /posts endpoint:
+   - Next, we will create a test for the GET /posts endpoint:
 
 *//----------spec/controllers/posts_spec.rb----------//*
 require 'rails_helper'

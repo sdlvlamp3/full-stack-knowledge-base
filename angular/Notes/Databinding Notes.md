@@ -17,7 +17,7 @@ This requires us to inform our app.component that one of its child components (t
 
 *//----------------------------------------------------------------PROPERTY AND EVENT BINDING---------------------------------------------------------------//*
 
-+ We need to be able to send data into a component or recieve data (recieve an event)
++ We need to be able to send data into a component or receive data (receive an event)
 
 + Property and event binding can be used on the following:
 
