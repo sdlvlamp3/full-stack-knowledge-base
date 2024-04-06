@@ -15,3 +15,17 @@
 7. Event-Binding:   A one-way connection from the view/template to the data source/logic.
 
 8. Two-Way-Binding:     When we connect the view/template to the source/logic, and when either of them changes, they update.
+
+9.  Directives:      How we give instructions to the DOM to control certain elements in Angular.
+
+10. Attribute Directive:    What we use to change the behavior or appearance of elements. (ngClass, ngStyle, ngModel)
+
+11. Structural Directive:   Used to change the DOM layout by adding, removing, or altering elements. (@If, @For, ngSwitch)
+
+12. Services:       In Angular, a service is a centralized store where you can place code so multiple other components can use it. Services allow apps to have better communication.
+ 
+13. Dependency Injection:       When a class uses code from another class or service instead of writing it locally. You "inject" the code from one part of the app into another.
+
+14. D.R.Y. Code:        "Don't Repeat Yourself" is a meta-programming philosophy that advises you to abstract away any logic you can use in multiple components to a shared place.
+
+15. 
