@@ -28,4 +28,8 @@
 
 14. D.R.Y. Code:        "Don't Repeat Yourself" is a meta-programming philosophy that advises you to abstract away any logic you can use in multiple components to a shared place.
 
-15. 
+15. View Encapsulation:     A built-in Angular feature where a component's CSS is locally scoped. Changing the paragraph styles inside a child component will not affect any sibling or parent component.
+
+16. Component Lifecycle:        Angular offers many different Lifecycle Hooks to run logic at specific points along the Component Lifecycle. Every component, once instantiated, wil run through a few phases (this is the lifecycle of the component)
+
+17. 
